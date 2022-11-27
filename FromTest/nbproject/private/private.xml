@@ -3,40 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/DomainModel/HoaDon.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/Iplm/DanhSachSanPhamRepository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Views/FrmDasBoard.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/Iplm/ChiTietHoaDonRepository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/Iplm/ThuongHieuRRepository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/ViewModels/KichCoRResponse.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/IThuongHieuRReository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Services/Iplm/ThuongHieuRService.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/IDanhSachSanPhamRepository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Services/IKichCoRService.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/ViewModels/ThuongHieuRResponse.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Services/Iplm/ChiTietHoaDonService.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Services/Iplm/DongSPRService.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Services/IDanhSAchSanPhamService.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/IChiTietHoaDonRepository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/Iplm/DongSanPhamRepository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Views/FrmThongTinCaNhan.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/Iplm/KichCoRRepository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Services/Iplm/KichCoRService.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Views/FrmChaoMoiNguoi.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/IDongSPRRepository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Services/IDongSPRService.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Services/Iplm/KieuDangImpl.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/ViewModels/HoaDonResponse.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Utilities/SQLServerConnection.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/ViewModels/DongSPRResponse.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/IKichCoRRepository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Services/IThuongHieuRService.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/IHoaDonRepository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/Iplm/DongSPRRepository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Services/Iplm/DanhSachSanPhamService.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/ViewModels/DanhSachSanPhamResponse.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Repository/Iplm/HoaDonRepository.java</file>
-            <file>file:/C:/Users/Admin/Downloads/f1/FromTest/src/Services/IChiTietHoaDonService.java</file>
+            <file>file:/C:/Users/Admin/Documents/DA1/FromTest/src/Views/FrmDasBoard.java</file>
+            <file>file:/C:/Users/Admin/Documents/DA1/FromTest/src/Views/FrmThongTinCaNhan.java</file>
         </group>
     </open-files>
 </project-private>

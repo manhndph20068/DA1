@@ -169,8 +169,10 @@ public class FrmDasBoard extends javax.swing.JFrame {
 
         TBHoaDon.removeColumn(TBHoaDon.getColumnModel().getColumn(1));
         btnRefresh.doClick();
+        
 
         showChoThanhToan();
+        
     }
 
     private void showComBoxThuocTinh() {
@@ -309,7 +311,7 @@ public class FrmDasBoard extends javax.swing.JFrame {
         listDssp = danhSAchSanPhamService.getAll();
         showDataTableDSSP(listDssp);
     }
-    
+
     private void showChoThanhToan() {
         rdoChoThanhToan.setSelected(true);
         if (rdoChoThanhToan.isSelected() == true) {
@@ -831,6 +833,11 @@ public class FrmDasBoard extends javax.swing.JFrame {
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
 
         TBSanPham.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -840,7 +847,7 @@ public class FrmDasBoard extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "STT", "ID", "Mã SP", "Tên SP", "Năm BH", "Mô tả", "Số Lượng", "Giá Nhập", "Giá Bán", "Anh"
+                "STT", "ID", "Mã SP", "Tên SP", "Năm BH", "Kích Cỡ", "Số Lượng", "Giá Nhập", "Giá Bán", "Anh"
             }
         ));
         TBSanPham.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1438,7 +1445,7 @@ public class FrmDasBoard extends javax.swing.JFrame {
                 .addComponent(jLabel71, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 375, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 233, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel73, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -2112,7 +2119,7 @@ public class FrmDasBoard extends javax.swing.JFrame {
                                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addComponent(txtDaChinh)
                                             .addComponent(txtDaPhu, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))
-                                        .addGap(187, 371, Short.MAX_VALUE)
+                                        .addGap(187, 223, Short.MAX_VALUE)
                                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(rdbtKichCo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(rdbtDongSanPham, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -2258,7 +2265,9 @@ public class FrmDasBoard extends javax.swing.JFrame {
                 .addGap(522, 522, 522)
                 .addComponent(jLabel5)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jTabbedPane1)
+            .addGroup(pnlCard2Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1424, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         pnlCard2Layout.setVerticalGroup(
             pnlCard2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2869,11 +2878,10 @@ public class FrmDasBoard extends javax.swing.JFrame {
         try {
             //them thong tin khach hang vao hoa don
             int rowHD = TBHoaDon.getSelectedRow();
-            String idSelected = TBHoaDon.getValueAt(rowHD, 1).toString();
+            String idSelected = TBHoaDon.getModel().getValueAt(rowHD, 1).toString();
             String tenkh = txtTenKH.getText();
             String sdt = txtSDT.getText();
             String diaChi = txtDiaChi.getText();
-            checkTTKH();
             HoaDon hoaDonTTKH = new HoaDon(tenkh, diaChi, sdt);
             JOptionPane.showMessageDialog(this, hoaDonService.updateTTKH(hoaDonTTKH, idSelected));
 
@@ -2893,12 +2901,13 @@ public class FrmDasBoard extends javax.swing.JFrame {
             jTienThua.setText(format.format(tienThua));
 
             //cap nhat trang thai 
-            String maSelected = TBHoaDon.getValueAt(rowHD, 2).toString();
+            String maSelected = TBHoaDon.getModel().getValueAt(rowHD, 2).toString();
             int trangThai = 1;
             HoaDon hoaDon = new HoaDon(trangThai);
             JOptionPane.showMessageDialog(this, hoaDonService.updateThanhToan(hoaDon, maSelected));
             listHD = hoaDonService.getAll();
             showDataTableHD(listHD);
+            showChoThanhToan();
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "Bạn chưa chọn hoá đơn");
@@ -2997,6 +3006,7 @@ public class FrmDasBoard extends javax.swing.JFrame {
         showDataTableHD(listHD);
         showChoThanhToan();
         dtmGH.setRowCount(0);
+        TBHoaDon.setRowSelectionInterval(0, 0);
     }//GEN-LAST:event_btnTaoHoaDonActionPerformed
 
     private void btAllSanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAllSanPhamActionPerformed
@@ -3643,6 +3653,10 @@ public class FrmDasBoard extends javax.swing.JFrame {
         showDataTableCTHD(listCTHD);
         showTongTien();
     }//GEN-LAST:event_BtnXoaActionPerformed
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel4MouseClicked
     private QuanLyDongSanPham getDongSanPham() {
         String ma = txtMaThuocTinh.getText();
         String ten = txtTenThuocTinh.getText();
