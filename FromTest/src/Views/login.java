@@ -233,8 +233,9 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-//        String userName = txtusername.getText();
-//        String passWord = new String(txtpassword.getPassword());
+        String userName = txtusername.getText();
+        String passWord = new String(txtpassword.getPassword());
+
         JOptionPane.showMessageDialog(this, "Đăng nhập thành công");
         FrmDasBoard fdb = new FrmDasBoard();
         fdb.setVisible(true);

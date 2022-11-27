@@ -20,4 +20,6 @@ public interface INhanVien {
     boolean update(NhanVien nv, String id);
 
     boolean delete(String id);
+
+    List<NhanVien> getDangNhap(NhanVien nv);
 }

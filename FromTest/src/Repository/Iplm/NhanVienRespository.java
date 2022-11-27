@@ -119,4 +119,15 @@ public class NhanVienRespository implements INhanVien {
         return check > 0;
     }
 
+    @Override
+    public List<NhanVien> getDangNhap(NhanVien nv) {
+        String query = "";
+        try ( Connection con = SQLServerConnection.getConnection();  PreparedStatement ps = con.prepareCall(query)) {
+
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
+        }
+        return null;
+    }
+
 }

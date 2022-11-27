@@ -140,6 +140,6 @@ public class QuanLyNhanVien {
     }
 
     public Object[] arriveNhanVien() {
-        return new Object[]{id, ma, ten, gioiTinh, ngaySinh, diaChi, soDienThoai, chucVu, trangThai, tenTaiKhoan, matKhau, hinhAnh};
+        return new Object[]{id, ma, ten, gioiTinh == 0 ? "Nam" : "Nữ", ngaySinh, diaChi, soDienThoai, chucVu, trangThai, tenTaiKhoan, matKhau, hinhAnh};
     }
 }
