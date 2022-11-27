@@ -3754,8 +3754,7 @@ public class FrmDasBoard extends javax.swing.JFrame {
         txtMaNhanVien.setText("");
         txtTenNhanVien.setText("");
         jdcNgaySinhNhanVien.setDateFormatString("");
-        rdbtNamNhanVien.setSelected(false);
-        rdbtNuNhanVien.setSelected(false);
+        buttonGroup3.clearSelection();
         txtDiaChiNhanVien.setText("");
         txtSoDienThoaiNhanVien.setText("");
         cbbChucVuNhanVien.setSelectedIndex(0);
@@ -3763,6 +3762,7 @@ public class FrmDasBoard extends javax.swing.JFrame {
         txtTenTk.setText("");
         jpfMatKhau.setText("");
         jlbAnhNhanVien.setText("");
+        jlbAnhNhanVien.setIcon(null);
     }//GEN-LAST:event_btLamMoiNhanVienActionPerformed
     private QuanLyNhanVien getNhanVien() {
         QuanLyNhanVien qlnv = new QuanLyNhanVien();
